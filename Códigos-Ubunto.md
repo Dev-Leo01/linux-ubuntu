@@ -1,5 +1,7 @@
 # Códigos ubunto via terminal.
 ---
+- Clique no icone do terminal, ou use as teclas Ctrl + Alt + T para acessar o terminal
+---
 - Selecionar códigos usados anteriormente - setas do teclado.
 * sudo apt update - Baixa as atualizações.
 * sudo apt upgrade - Instala as atualizações.
