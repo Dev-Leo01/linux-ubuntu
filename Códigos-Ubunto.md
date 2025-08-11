@@ -25,3 +25,20 @@
 * sudo ./VBoxLinuxAdditions.run: <br> - Executa a aplicação disponível no diretório que acessou e instala os recursos.
 ---
 * lsmod | grep vbox: <br> - lsmod: Listar módulos carregados no Kernel. <br> - grep: funciona como um filtro para pesquisar apenas as linhas que contenham o texto que deseja pesquisar ( nesse caso, vbox ). <br> - vbox: prefixo que inicia normalmente os nomes dos módulos do VirtualBox. <br>
+---
+## Configuração da VM (host)
+---
+* Criação de uma nova pasta na máquina física, no disco local " VirtualBox-PastaCompartilhada "
+* Criamos documento de texto com o nome arquivo_teste_host.
+* Foi escrito dentro deste arquivo a mensagem: " Este é um teste para pasta compartilhada entre host (máquina física) e guest (virtual). ".
+## Configuração da VM (guest)
+---
+* Virtual Box - Configurações - Pasta Compartilhada - Adicionar - Selecionar pasta no disco local.
+    - Iniciar Ubunto.
+    - Acessar Terminal.
+* sudo adduser $USER vboxsf - Adiciona o usuário no grupo vboxsf após isto, dar sudo reboot para reiniciar.
+* cd /media/sf_VirtualBox-PastaCompartilhada = acessa o diretório da pasta compartilhada.
+* ls = Lista os arquivos na pasta.
+* comando para criar arquivo
+* cat + nome do arquivo de texto = Leitura do que está escrito no documento de texto.
+* 
