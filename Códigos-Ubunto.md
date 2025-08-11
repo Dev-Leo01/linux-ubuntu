@@ -38,7 +38,19 @@
     - Acessar Terminal.
 * sudo adduser $USER vboxsf - Adiciona o usuário no grupo vboxsf após isto, dar sudo reboot para reiniciar.
 * cd /media/sf_VirtualBox-PastaCompartilhada = acessa o diretório da pasta compartilhada.
+* cd ../ = voltar no diretório, na pasta anterior.
 * ls = Lista os arquivos na pasta.
-* comando para criar arquivo
+* echo " Mensagem que voce quer dentro " > ( nome do arquivo tipo "arquivo_teste" e não esqueça da extensão " .txt " no final = Cria um arquivo na pasta compartilhada.
 * cat + nome do arquivo de texto = Leitura do que está escrito no documento de texto.
-* 
+### Após isto usamos um aplicativo padrão do ubunto para abrir o arquivo e edita-lo.
+* nano ( nome do arquivo ) = Usar CTRL + os guias que tem no próprio nano.
+### Foi instalado um segundo aplicativo que foi instalado " VIM ".
+- digite " vim " sem estar no diretório da pasta com partilhada e aparecerá os comandos de instalação.
+---
+* vim (nome do arquivo) = abre o arquivo de texto.
+  - Insert = Editar o texto.
+  - ESC = Sair do modo de edição.
+* :q! = sair sem salvar alterações.
+* :wq = salvar alterações e sair.
+* :set number = aparece os números no canto
+* vim ~/.vimrc = configurar o vim, onde coloca o :set number para não precisar ficar digitando o comando toda vez que usar o vim.
