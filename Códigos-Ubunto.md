@@ -1,6 +1,6 @@
 # Códigos ubunto via terminal.
 ---
-## Data: 06/08/2025.
+# Data: 06/08/2025.
 ---
 * Comando sudo <br> - Concede privilégio de administrador.
 ---
@@ -59,7 +59,7 @@
 * nano ( nome do arquivo ) = Usar CTRL + os guias que tem no próprio nano.
 ---
 ### Foi instalado um segundo aplicativo que foi instalado " VIM ".
-- digite " vim " sem estar no diretório da pasta com partilhada e aparecerá os comandos de instalação.
+- digite " vim " sem estar no diretório da pasta compartilhada e aparecerá os comandos de instalação.
 ---
 * vim (nome do arquivo) = abre o arquivo de texto.
   - Insert = Editar o texto.
@@ -73,7 +73,7 @@
 ---
 * vim ~/.vimrc = configurar o vim, onde coloca o :set number para não precisar ficar digitando o comando toda vez que usar o vim.
 ---
-## Data: 11/08/2025.
+# Data: 11/08/2025.
 ---
 Dentro do diretório: cd /media/sf_VirtualBox-PastaCompartilhada.
 ---
@@ -87,7 +87,7 @@ Dentro do diretório: cd /media/sf_VirtualBox-PastaCompartilhada.
 ---
 * 2 Alternativas para adicionar um usuário em um grupo.
   - sudo adduser $USER nome_do_grupo (Ubuntu/Debian Desktop).
-  - sudo usermod -aG nome_de_usuário nome_do_grupo.
+  - sudo usermod -aG nome_do_grupo nome_de_usuário.
      - Consegue adicionar um mesmo usuário para vários grupos de uma só vez, basta colocar o nome de todos os grupos que o usuário irá ser adicionado depois do nome de usuário. exemplo: <br> sudo usermod -aG nome_de_grupo1 nome_de_grupo2 nome_de_usuário.
 ---
 Fomos ao diretório raiz e foi digitado:
@@ -106,13 +106,40 @@ drwxr-x--- 16 senac senac  4096 ago 11 20:23 senac
 - alunos é o grupo proprietário.
 - 4096 = tamanho.
 --- 
-  - d = diretório.
-  - r = ler.
-  - w = gravar dados.
-  - x = executar.
+  - d = diretório. (Directory)
+  - r = ler. (Read)
+  - w = gravar dados. (Write)
+  - x = executar. (eXecute)
   - "-" = sem permissão.
 ---
-1° Letra = diretório. <br>
-próximos 3 caracteres = proprietário.<br>
-próximos 3 caracteres = grupo.<br>
-próximos 3 caracteres = outros.<br>
+- Blocos de permissões são dividos em:
+  - 1° Letra = Diretório. <br>
+  - próximos 3 caracteres = Usuário proprietário. (1° Bloco) <br>
+  - próximos 3 caracteres = Grupo proprietário. (2° Bloco) <br>
+  - próximos 3 caracteres = Outros. (3° Bloco) <br>
+    - Se houver "-" não tem permissão <br> Exemplo: " d rwx r-x --x ".
+---
+# Data: 13/08/2025.
+---
+- Para verificar TODOS os grupos existentes:
+  - cat /etc/group
+- Para verificar SOMENTE os grupos dos quais o usuário logado faz parte do grupo sudo
+  - groups
+## Comando para mudar as permissões dos blocos de permissões do diretório:
+ - sudo chmod (valor do cálculo) nome_da_pasta.
+## Tabela de Valores Padrão de rwx: 
+<img width="505" height="301" alt="image" src="https://github.com/user-attachments/assets/da64b401-884d-473c-9d8e-24ed39e97fc8" /> <br>
+---
+### Como Fazer os cálculos?:
+ - Some os números de R + W + X de cada bloco.
+#### Exemplos:
+- chmod 750 (d rwx r-x ---):
+  - 7 = Usuário proprietário tem todas as permissões.
+  - 5 = Grupo tem permissão de leitura e execução.
+  - 0 = Outros não possui permissão. <br>
+- chmod 777 (d rwx rwx rwx):
+  - 7 = Usuário proprietário tem todas as permissões.
+  - 7 = Grupo tem todas as permissões.
+  - 7 = Outros tem todas as permissões.
+### Comando Para Remover arquivos, diretórios:
+- rm nome_do_diretório ou nome_do_arquivo.
