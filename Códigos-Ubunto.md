@@ -117,7 +117,8 @@ drwxr-x--- 16 senac senac  4096 ago 11 20:23 senac
   - próximos 3 caracteres = Usuário proprietário. (1° Bloco) <br>
   - próximos 3 caracteres = Grupo proprietário. (2° Bloco) <br>
   - próximos 3 caracteres = Outros. (3° Bloco) <br>
-    - Se houver "-" não tem permissão <br> Exemplo: " d rwx r-x --x ".
+    - Se houver "-" não tem permissão <br> Exemplo: " d rwx r-x --x ". <br>
+<img width="578" height="352" alt="image" src="https://github.com/user-attachments/assets/e1c23ad5-be5b-48b3-9200-55c7a5093481" /> <br>
 ---
 # Data: 13/08/2025.
 ---
@@ -141,5 +142,13 @@ drwxr-x--- 16 senac senac  4096 ago 11 20:23 senac
   - 7 = Usuário proprietário tem todas as permissões.
   - 7 = Grupo tem todas as permissões.
   - 7 = Outros tem todas as permissões.
+## Tabela CHMOD:
+<img width="374" height="181" alt="image" src="https://github.com/user-attachments/assets/52bfa91c-b546-4f17-9054-2f2aef469c9c" /> <br>
+---
 ### Comando Para Remover arquivos, diretórios:
 - rm nome_do_diretório ou nome_do_arquivo.
+---
+### Comando Criação de diretório, arquivos:
+- echo "frase" > nome_do_arquivo e a extensão (.txt .sh etc) = Com mensagem dentro.
+- echo > nome_do_arquivo e a extensão = sem mensagem dentro.
+- touch nome_do_arquivo.
